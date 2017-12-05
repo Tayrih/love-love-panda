@@ -1,182 +1,419 @@
-/*
-* Skeleton V2.0.4
-* Copyright 2014, Dave Gamache
-* www.getskeleton.com
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-* 12/29/2014
-*/
+/* Variables */
 
-*{
-  margin: 0;
-  padding: 0;
+:root {
+  --orange: #fe8b61;
+  --green: #b1e282;
 }
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #f78e69;
-  color: #fff;
-  font-size: 16px;
-  line-height: 1,75;
-  font-weight: 400;
-}
+/* Reset */
 
-.title {
-  padding: 20px 0px;
-  text-align: right;
-}
-
-.uno {
-  background-image: url("assets/img/uno.jpg");
-  height: 350px;
-}
-
-.green {
-  background-color: #abe188;
-}
-
-.paragraph, h2 {
-  text-align: center;
-  padding-bottom: 10px;
-}
-
-.box {
-  background-color: #f78e69;
-}
-
-.rows {
-  height: 50%;
-  padding: 8% 0;
+* {
   box-sizing: border-box;
 }
 
+body {
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  /* background-image: url('../docs/imagen.png');
+  background-repeat: no-repeat;
+  height: 4000px; */
+}
 
-/* Grid
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/* Grid */
+
 .container {
-  position: relative;
-  width: 100%;
-  max-width: 960px;
   margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box; }
-.column,
-.columns {
+  max-width: 1200px;
   width: 100%;
-  float: left;
-  box-sizing: border-box; }
-
-/* For devices larger than 400px */
-@media (min-width: 400px) {
-  .container {
-    width: 85%;
-    padding: 0; }
 }
 
-/* For devices larger than 550px */
-@media (min-width: 550px) {
-  .container {
-    width: 80%; }
-  .column,
-  .columns {
-    margin-left: 4%; }
-  .column:first-child,
-  .columns:first-child {
-    margin-left: 0; }
-
-  .one.column,
-  .one.columns                    { width: 4.66666666667%; }
-  .two.columns                    { width: 13.3333333333%; }
-  .three.columns                  { width: 22%;            }
-  .four.columns                   { width: 30.6666666667%; }
-  .five.columns                   { width: 39.3333333333%; }
-  .six.columns                    { width: 48%;            }
-  .seven.columns                  { width: 56.6666666667%; }
-  .eight.columns                  { width: 65.3333333333%; }
-  .nine.columns                   { width: 74.0%;          }
-  .ten.columns                    { width: 82.6666666667%; }
-  .eleven.columns                 { width: 91.3333333333%; }
-  .twelve.columns                 { width: 100%; margin-left: 0; }
-
-  .one-third.column               { width: 30.6666666667%; }
-  .two-thirds.column              { width: 65.3333333333%; }
-
-  .one-half.column                { width: 48%; }
-
-  /* Offsets */
-  .offset-by-one.column,
-  .offset-by-one.columns          { margin-left: 8.66666666667%; }
-  .offset-by-two.column,
-  .offset-by-two.columns          { margin-left: 17.3333333333%; }
-  .offset-by-three.column,
-  .offset-by-three.columns        { margin-left: 26%;            }
-  .offset-by-four.column,
-  .offset-by-four.columns         { margin-left: 34.6666666667%; }
-  .offset-by-five.column,
-  .offset-by-five.columns         { margin-left: 43.3333333333%; }
-  .offset-by-six.column,
-  .offset-by-six.columns          { margin-left: 52%;            }
-  .offset-by-seven.column,
-  .offset-by-seven.columns        { margin-left: 60.6666666667%; }
-  .offset-by-eight.column,
-  .offset-by-eight.columns        { margin-left: 69.3333333333%; }
-  .offset-by-nine.column,
-  .offset-by-nine.columns         { margin-left: 78.0%;          }
-  .offset-by-ten.column,
-  .offset-by-ten.columns          { margin-left: 86.6666666667%; }
-  .offset-by-eleven.column,
-  .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
-
-  .offset-by-one-third.column,
-  .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
-  .offset-by-two-thirds.column,
-  .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
-
-  .offset-by-one-half.column,
-  .offset-by-one-half.columns     { margin-left: 52%; }
-
-}
-
-
-/* Base Styles
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* NOTE
-html is set to 62.5% so that all the REM measurements throughout Skeleton
-are based on 10px sizing. So basically 1.5rem = 15px :) */
-
-/* Clearing
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-/* Self Clearing Goodness */
-.container:after,
-.row:after,
-.u-cf {
+.row::after {
   content: "";
   display: table;
-  clear: both; }
+  clear: both;
+}
+
+[class*='col-'] {
+  float: left;
+  padding: 15px;
+}
+
+.col-xs-1 {
+  width: 8.33333333%;
+}
+
+.col-xs-2 {
+  width: 16.66666667%;
+}
+
+.col-xs-3 {
+  width: 25%;
+}
+
+.col-xs-4 {
+  width: 33.33333333%;
+}
+
+.col-xs-5 {
+  width: 41.66666667%;
+}
+
+.col-xs-6 {
+  width: 50%;
+}
+
+.col-xs-7 {
+  width: 58.33333333%;
+}
+
+.col-xs-8 {
+  width: 66.66666667%;
+}
+
+.col-xs-9 {
+  width: 75%;
+}
+
+.col-xs-10 {
+  width: 83.33333333%;
+}
+
+.col-xs-11 {
+  width: 91.66666667%;
+}
+
+.col-xs-12 {
+  width: 100%;
+}
+
+.col-xs-offset-1 {
+  width: 8.33333333%;
+}
+
+.col-xs-offset-2 {
+  width: 16.66666667%;
+}
+
+.col-xs-offset-3 {
+  width: 25%;
+}
+
+.col-xs-offset-4 {
+  width: 33.33333333%;
+}
+
+.col-xs-offset-5 {
+  width: 41.66666667%;
+}
+
+.col-xs-offset-6 {
+  width: 50%;
+}
+
+.col-xs-offset-7 {
+  width: 58.33333333%;
+}
+
+.col-xs-offset-8 {
+  width: 66.66666667%;
+}
+
+.col-xs-offset-9 {
+  width: 75%;
+}
+
+.col-xs-offset-10 {
+  width: 83.33333333%;
+}
+
+.col-xs-offset-11 {
+  width: 91.66666667%;
+}
+
+.col-xs-offset-12 {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .col-sm-1 {
+    width: 8.33333333%;
+  }
+
+  .col-sm-2 {
+    width: 16.66666667%;
+  }
+
+  .col-sm-3 {
+    width: 25%;
+  }
+
+  .col-sm-4 {
+    width: 33.33333333%;
+  }
+
+  .col-sm-5 {
+    width: 41.66666667%;
+  }
+
+  .col-sm-6 {
+    width: 50%;
+  }
+
+  .col-sm-7 {
+    width: 58.33333333%;
+  }
+
+  .col-sm-8 {
+    width: 66.66666667%;
+  }
+
+  .col-sm-9 {
+    width: 75%;
+  }
+
+  .col-sm-10 {
+    width: 83.33333333%;
+  }
+
+  .col-sm-11 {
+    width: 91.66666667%;
+  }
+
+  .col-sm-12 {
+    width: 100%;
+  }
+
+  .col-sm-offset-1 {
+    width: 8.33333333%;
+  }
+
+  .col-sm-offset-2 {
+    width: 16.66666667%;
+  }
+
+  .col-sm-offset-3 {
+    width: 25%;
+  }
+
+  .col-sm-offset-4 {
+    width: 33.33333333%;
+  }
+
+  .col-sm-offset-5 {
+    width: 41.66666667%;
+  }
+
+  .col-sm-offset-6 {
+    width: 50%;
+  }
+
+  .col-sm-offset-7 {
+    width: 58.33333333%;
+  }
+
+  .col-sm-offset-8 {
+    width: 66.66666667%;
+  }
+
+  .col-sm-offset-9 {
+    width: 75%;
+  }
+
+  .col-sm-offset-10 {
+    width: 83.33333333%;
+  }
+
+  .col-sm-offset-11 {
+    width: 91.66666667%;
+  }
+
+  .col-sm-offset-12 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-md-1 {
+    width: 8.33333333%;
+  }
+
+  .col-md-2 {
+    width: 16.66666667%;
+  }
+
+  .col-md-3 {
+    width: 25%;
+  }
+
+  .col-md-4 {
+    width: 33.33333333%;
+  }
+
+  .col-md-5 {
+    width: 41.66666667%;
+  }
+
+  .col-md-6 {
+    width: 50%;
+  }
+
+  .col-md-7 {
+    width: 58.33333333%;
+  }
+
+  .col-md-8 {
+    width: 66.66666667%;
+  }
+
+  .col-md-9 {
+    width: 75%;
+  }
+
+  .col-md-10 {
+    width: 83.33333333%;
+  }
+
+  .col-md-11 {
+    width: 91.66666667%;
+  }
+
+  .col-md-12 {
+    width: 100%;
+  }
+
+  .col-md-offset-1 {
+    width: 8.33333333%;
+  }
+
+  .col-md-offset-2 {
+    width: 16.66666667%;
+  }
+
+  .col-md-offset-3 {
+    width: 25%;
+  }
+
+  .col-md-offset-4 {
+    width: 33.33333333%;
+  }
+
+  .col-md-offset-5 {
+    width: 41.66666667%;
+  }
+
+  .col-md-offset-6 {
+    width: 50%;
+  }
+
+  .col-md-offset-7 {
+    width: 58.33333333%;
+  }
+
+  .col-md-offset-8 {
+    width: 66.66666667%;
+  }
+
+  .col-md-offset-9 {
+    width: 75%;
+  }
+
+  .col-md-offset-10 {
+    width: 83.33333333%;
+  }
+
+  .col-md-offset-11 {
+    width: 91.66666667%;
+  }
+
+  .col-md-offset-12 {
+    width: 100%;
+  }
+}
+
+/* Helpers */
+
+.text-center {
+  text-align: center;
+}
+
+.view-mobile {
+  display: block;
+}
+
+.view-desktop {
+  display: none;
+}
 
 
-/* Media Queries
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/*
-Note: The best way to structure the use of media queries is to create the queries
-near the relevant code. For example, if you wanted to change the styles for buttons
-on small devices, paste the mobile query code up in the buttons section and style it
-there.
-*/
+@media (min-width: 768px) {
+  .view-mobile {
+    display: none;
+  }
+
+  .view-desktop {
+    display: block;
+  }
+}
+
+/* Styles for landing */
+
+.main-title {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 15px;
+}
+
+.common-title {
+  font-size: 32px;
+  font-weight: 700;
+}
 
 
-/* Larger than mobile */
-@media (min-width: 400px) {}
+header {
+  background-color: var(--orange);
+  padding: 80px 40px 40px;
+}
 
-/* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
+.bg-image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
 
-/* Larger than tablet */
-@media (min-width: 750px) {}
+.bg-image-medium {
+  height: 440px;
+}
 
-/* Larger than desktop */
-@media (min-width: 1000px) {}
 
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {}
+.bg-image-large {
+  height: 660px;
+}
+
+.bg-image-1 {
+  background-image: url('../assets/images/uno.jpg');
+}
+
+.bg-image-2 {
+  background-image: url('../assets/images/dos.jpg');
+}
+
+.bg-image-3 {
+  background-image: url('../assets/images/tres.jpg');
+}
+
+.green-section {
+  background-color: var(--green);
+  border-top: 10px solid var(--orange);
+  border-bottom: 10px solid var(--orange);
+}
