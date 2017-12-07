@@ -382,7 +382,7 @@ h6 {
 
 header {
   background-color: var(--orange);
-  padding: 80px 40px 40px;
+  padding: 20px 40px 20px;
 }
 
 .bg-image {
@@ -401,19 +401,35 @@ header {
 }
 
 .bg-image-1 {
-  background-image: url('../assets/images/uno.jpg');
+  background-image: url('../assets/img/uno.jpg');
 }
 
 .bg-image-2 {
-  background-image: url('../assets/images/dos.jpg');
+  background-image: url('../assets/img/dos.jpg');
 }
 
 .bg-image-3 {
-  background-image: url('../assets/images/tres.jpg');
+  background-image: url('../assets/img/tres.jpg');
 }
 
 .green-section {
   background-color: var(--green);
   border-top: 10px solid var(--orange);
   border-bottom: 10px solid var(--orange);
+}
+
+.box {
+  background-color: var(--orange);
+  padding: 10px;
+  text-align: center;
+  width: auto;
+}
+
+footer {
+  background-color: var(--orange);
+  padding: 10px 40px 10px;
+}
+
+footer p {
+  margin: 0;
 }
