@@ -21,6 +21,36 @@ body {
   font-weight: 400;
 }
 
+.title {
+  padding: 20px 0px;
+  text-align: right;
+}
+
+.uno {
+  background-image: url("assets/img/uno.jpg");
+  height: 350px;
+}
+
+.green {
+  background-color: #abe188;
+}
+
+.paragraph, h2 {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.box {
+  background-color: #f78e69;
+}
+
+.rows {
+  height: 50%;
+  padding: 8% 0;
+  box-sizing: border-box;
+}
+
+
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {
